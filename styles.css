@@ -86,8 +86,8 @@ ol {
   justify-content: space-between;
   margin: 0 auto;
   padding: 12px;
-  background: #D1D2D3;
-  border: 1px solid #f2f2f2;
+  background: #f2f2f2;
+  border: 1px solid #fff;
 }
 
 .tab-header > h2 {
@@ -113,7 +113,7 @@ ol {
 }
 
 .active > .tab-header {
-  background: #f2f2f2;
+  background: #fff;
 }
 
 .active > .tab-header > h2 {
@@ -164,6 +164,7 @@ ol {
   color: #f2f2f2;
   height: 50px;
   border: none;
+  outline: none;
   font-size: 18px;
   font-weight: 300;
 }
@@ -211,6 +212,7 @@ ol {
 
   ol {
     position: relative;
+    width: 80%;
     border-color: #fff;
   }
 
@@ -223,7 +225,6 @@ ol {
     padding: 5px;
     border: 1px solid #fff;
     border-bottom: 1px solid #D1D2D3;
-    background: #f2f2f2;
   }
 
   .active > .tab-header {
@@ -273,8 +274,16 @@ ol {
     height: 300px;
   }
 
+  .text-container > h3 {
+    font-size: 25px;
+  }
+
   .text-container > hr {
     margin: 12px 0;
+  }
+
+  .text-container > p {
+    font-size: 16px;
   }
 
   .code-btn {

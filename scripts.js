@@ -1,5 +1,4 @@
 
-
 const toggleTabs = (e) => {
   const currentlyActive = $('li.tab').hasClass('active');
 
@@ -17,8 +16,11 @@ const toggleTabs = (e) => {
   }
 
   $(e.target).closest('.tab').addClass('active');
-  $(e.target).text('-');
+
+  if ($( window ).width() < 680) {
+    $(e.target).text('-');
+  }
 }
 
 
-$('button').on('click', (e) => toggleTabs(e));
+$('.tab-header').on('click', (e) => toggleTabs(e));
