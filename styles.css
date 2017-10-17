@@ -12,7 +12,6 @@ body {
   background: #fff;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
 }
 
 /********** HEADER STYLES **********/
@@ -51,8 +50,9 @@ header > p {
 /********** MAIN STYLES **********/
 
 main {
+  display: flex;
+  justify-content: center;
   color: #666666;
-  text-align: center;
 }
 
 .accordion-tabs {
@@ -156,17 +156,20 @@ ol {
   text-align: left;
 }
 
-.code-btn {
+.code-link {
+  display: block;
+  text-decoration: none;
+  height: 50px;
   width: 90%;
   min-width: 280px;
   max-width: 600px;
+  margin: 0 auto 50px;
   background: #3F3244;
   color: #f2f2f2;
-  height: 50px;
-  border: none;
-  outline: none;
   font-size: 18px;
   font-weight: 300;
+  line-height: 50px;
+  text-align: center;
 }
 
 /********** MEDIA QUERIES **********/
@@ -286,8 +289,34 @@ ol {
     font-size: 16px;
   }
 
-  .code-btn {
+  .code-link {
     width: 300px;
   }
 
+}
+
+@media screen and (min-width: 750px) {
+  .accordion-header > h2 {
+    font-size: 1.8vw;
+  }
+
+  .accordion-header > hr {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .accordion-header > hr {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .accordion-header > hr {
+    width: 70%;
+  }
+
+  .accordion-header > h2 {
+    font-size: 1.6vw;
+  }
 }
