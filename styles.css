@@ -1,4 +1,4 @@
-/***********BASE STYLES***********/
+/********** BASE STYLES **********/
 
 * {
   margin: 0;
@@ -9,7 +9,165 @@
 body {
   height: 100%;
   width: 100%;
-  color: #999EA9;
+  background: #f2f2f2;
+  color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+/********** HEADER STYLES **********/
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 92px;
+  width: 100%;
+  background: #2F2235;
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.blue-header {
+  color: #34D1D1;
+}
+
+header > hr {
+  margin: 0 40%;
+  max-width: 25%;
+  border-width: 0 0 1px;
+  border-color: #3F3244;
+}
+
+header > p {
+  font-size: 14px;
+}
+
+/********** MAIN STYLES **********/
+
+main {
+  color: #666666;
+  text-align: center;
+}
+
+.accordion-tabs {
+  padding-top: 35px;
+}
+
+.accordion-tabs > h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.accordion-tabs > hr {
+  margin: 12px 40%;
+  max-width: 25%;
+  border-width: 0 0 1px;
+  border-color: #D1D2D3;
+}
+
+ol {
+  margin: 50px auto;
+  width: 90%;
+  list-style-type: none;
+  border: 1px solid #D1D2D3;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 12px;
+  background: #D1D2D3;
+  border: 1px solid #f2f2f2;
+}
+
+.tab-header > h2 {
+  color: #666666;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.toggle {
+  color: #666666;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.info {
+  display: none;
+}
+
+.active > .tab-header {
+  background: #f2f2f2;
+}
+
+.active > .tab-header > h2 {
+  font-weight: 400;
+}
+
+.active > article.info {
+  display: block;
+}
+
+.image-container {
+  min-height: 151px;
+  background-image: url('./assets/northern-lights-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-container {
+  padding: 15px;
+}
+
+.text-container > h3 {
+  color: #000000;
+  font-size: 20px;
+  text-align: left;
+}
+
+.text-container > hr {
+  margin: 12px 5%;
+  max-width: 90%;
+  border-width: 0 0 1px;
+  border-color: #666666;
+}
+
+.text-container > p {
+  color: #000000;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.code-btn {
+  width: 90%;
+  background: #3F3244;
+  color: #f2f2f2;
+  height: 50px;
+  border: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (min-width: 530px) {
+  ol,
+  .code-btn {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  ol,
+  .code-btn {
+    width: 60%;
+  }
 }
