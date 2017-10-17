@@ -85,10 +85,51 @@ ol {
   border: 1px solid #f2f2f2;
 }
 
+.tab-header > h2 {
+  color: #666666;
+  font-size: 25px;
+  font-weight: 300;
+}
+
 .toggle {
+  color: #666666;
+  cursor: pointer;
   font-size: 30px;
+  font-weight: 300;
 }
 
 .info {
-  display: none;
+  /*display: none;*/
+}
+
+.image-container {
+  height: 151px;
+  width: 100%;
+  background-image: url('./assets/northern-lights-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-container {
+  padding: 15px;
+}
+
+.text-container > h3 {
+  color: #000000;
+  font-size: 20px;
+  text-align: left;
+}
+
+.text-container > hr {
+  margin: 12px 5%;
+  max-width: 90%;
+  border-width: 0 0 1px;
+  border-color: #666666;
+}
+
+.text-container > p {
+  color: #000000;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left;
 }
