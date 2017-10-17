@@ -1,4 +1,4 @@
-/***********BASE STYLES***********/
+/********** BASE STYLES **********/
 
 * {
   margin: 0;
@@ -9,7 +9,86 @@
 body {
   height: 100%;
   width: 100%;
-  color: #999EA9;
+  color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+/********** HEADER STYLES **********/
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 92px;
+  width: 100%;
+  background: #2F2235;
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.blue-header {
+  color: #34D1D1;
+}
+
+header > hr {
+  margin: 0 35%;
+  max-width: 30%;
+  border-width: 0 0 1px;
+  border-color: #666666;
+}
+
+header > p {
+  font-size: 14px;
+}
+
+/********** MAIN STYLES **********/
+
+main {
+  color: #666666;
+  text-align: center;
+}
+
+.accordion-tabs {
+  padding-top: 35px;
+}
+
+.accordion-tabs > h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.accordion-tabs > hr {
+  margin: 12px 35%;
+  max-width: 30%;
+  border-width: 0 0 1px;
+  border-color: #666666;
+}
+
+ol {
+  margin: 50px auto;
+  width: 90%;
+  list-style-type: none;
+  border: 1px solid #D1D2D3;
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 12px;
+  background: #D1D2D3;
+  border: 1px solid #f2f2f2;
+}
+
+.toggle {
+  font-size: 30px;
+}
+
+.info {
+  display: none;
 }
