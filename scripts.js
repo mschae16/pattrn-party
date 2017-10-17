@@ -1,4 +1,3 @@
-
 const toggleTabs = (e) => {
  const targetActive = $(e.target).closest('.tab').hasClass('active');
 
