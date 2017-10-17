@@ -9,8 +9,8 @@
 body {
   height: 100%;
   width: 100%;
-  background: #f2f2f2;
-  color: #f2f2f2;
+  background: #fff;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
@@ -23,6 +23,7 @@ header {
   justify-content: space-evenly;
   height: 92px;
   width: 100%;
+  min-width: 300px;
   background: #2F2235;
   text-align: center;
 }
@@ -55,15 +56,18 @@ main {
 }
 
 .accordion-tabs {
+  width: 100%;
+  max-width: 1300px;
+  min-width: 300px;
   padding-top: 35px;
 }
 
-.accordion-tabs > h2 {
+.accordion-header > h2 {
   font-size: 16px;
   font-weight: 300;
 }
 
-.accordion-tabs > hr {
+.accordion-header > hr {
   margin: 12px 40%;
   max-width: 25%;
   border-width: 0 0 1px;
@@ -82,8 +86,8 @@ ol {
   justify-content: space-between;
   margin: 0 auto;
   padding: 12px;
-  background: #D1D2D3;
-  border: 1px solid #f2f2f2;
+  background: #f2f2f2;
+  border: 1px solid #fff;
 }
 
 .tab-header > h2 {
@@ -93,6 +97,10 @@ ol {
 }
 
 .toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
   color: #666666;
   cursor: pointer;
   font-size: 30px;
@@ -101,10 +109,11 @@ ol {
 
 .info {
   display: none;
+  flex-direction: column;
 }
 
 .active > .tab-header {
-  background: #f2f2f2;
+  background: #fff;
 }
 
 .active > .tab-header > h2 {
@@ -112,7 +121,7 @@ ol {
 }
 
 .active > article.info {
-  display: block;
+  display: flex;
 }
 
 .image-container {
@@ -120,6 +129,7 @@ ol {
   background-image: url('./assets/northern-lights-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .text-container {
@@ -136,7 +146,7 @@ ol {
   margin: 12px 5%;
   max-width: 90%;
   border-width: 0 0 1px;
-  border-color: #666666;
+  border-color: #D1D2D3;
 }
 
 .text-container > p {
@@ -148,10 +158,13 @@ ol {
 
 .code-btn {
   width: 90%;
+  min-width: 280px;
+  max-width: 600px;
   background: #3F3244;
   color: #f2f2f2;
   height: 50px;
   border: none;
+  outline: none;
   font-size: 18px;
   font-weight: 300;
 }
@@ -165,9 +178,116 @@ ol {
   }
 }
 
-@media screen and (min-width: 850px) {
-  ol,
-  .code-btn {
-    width: 60%;
+@media screen and (min-width: 680px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding: 0 75px;
   }
+
+  header > hr {
+    display: none;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-header > h2 {
+    padding-left: 75px;
+    text-align: left;
+  }
+
+  .accordion-header > hr {
+    margin: unset;
+    max-width: unset;
+    margin-right: 75px;
+    min-width: 55%;
+  }
+
+  ol {
+    position: relative;
+    width: 80%;
+    border-color: #fff;
+  }
+
+  .tab-header {
+    position: absolute;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #D1D2D3;
+  }
+
+  .active > .tab-header {
+    background: #fff;
+    border: 1px solid #D1D2D3;
+    border-bottom: none;
+  }
+
+  .tab-one {
+    width: 25%;
+  }
+
+  .tab-two {
+    left: 25%;
+    width: 25%;
+  }
+
+  .tab-three {
+    left: 50%;
+    width: 25%;
+  }
+
+  .tab-four {
+    left: 75%;
+    width: 25%;
+  }
+
+  .tab-header > h2 {
+    font-size: 18px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .info {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    padding: 15px;
+    border: 1px solid #D1D2D3;
+    border-top: none;
+  }
+
+  .image-container {
+    min-width: 200px;
+    height: 300px;
+  }
+
+  .text-container > h3 {
+    font-size: 25px;
+  }
+
+  .text-container > hr {
+    margin: 12px 0;
+  }
+
+  .text-container > p {
+    font-size: 16px;
+  }
+
+  .code-btn {
+    width: 300px;
+  }
+
 }
