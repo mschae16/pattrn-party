@@ -116,11 +116,10 @@ ol {
 }
 
 .image-container {
-  height: 151px;
-  width: 100%;
+  min-height: 151px;
   background-image: url('./assets/northern-lights-mobile.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .text-container {
@@ -155,4 +154,20 @@ ol {
   border: none;
   font-size: 18px;
   font-weight: 300;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (min-width: 530px) {
+  ol,
+  .code-btn {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  ol,
+  .code-btn {
+    width: 60%;
+  }
 }
