@@ -9,8 +9,8 @@
 body {
   height: 100%;
   width: 100%;
-  background: #f2f2f2;
-  color: #f2f2f2;
+  background: #fff;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
@@ -129,6 +129,7 @@ ol {
   background-image: url('./assets/northern-lights-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .text-container {
@@ -210,11 +211,25 @@ ol {
 
   ol {
     position: relative;
+    border-color: #fff;
   }
 
   .tab-header {
     position: absolute;
     top: 0px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #D1D2D3;
+    background: #f2f2f2;
+  }
+
+  .active > .tab-header {
+    background: #fff;
+    border: 1px solid #D1D2D3;
+    border-bottom: none;
   }
 
   .tab-one {
@@ -236,11 +251,21 @@ ol {
     width: 25%;
   }
 
+  .tab-header > h2 {
+    font-size: 18px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
   .info {
     flex-direction: row;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
     padding: 15px;
+    border: 1px solid #D1D2D3;
+    border-top: none;
   }
 
   .image-container {
