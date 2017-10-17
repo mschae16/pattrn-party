@@ -53,6 +53,7 @@ main {
   display: flex;
   justify-content: center;
   color: #666666;
+  text-align: center;
 }
 
 .accordion-tabs {
