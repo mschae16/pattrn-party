@@ -23,6 +23,7 @@ header {
   justify-content: space-evenly;
   height: 92px;
   width: 100%;
+  min-width: 300px;
   background: #2F2235;
   text-align: center;
 }
@@ -55,15 +56,18 @@ main {
 }
 
 .accordion-tabs {
+  width: 100%;
+  max-width: 1300px;
+  min-width: 300px;
   padding-top: 35px;
 }
 
-.accordion-tabs > h2 {
+.accordion-header > h2 {
   font-size: 16px;
   font-weight: 300;
 }
 
-.accordion-tabs > hr {
+.accordion-header > hr {
   margin: 12px 40%;
   max-width: 25%;
   border-width: 0 0 1px;
@@ -93,6 +97,10 @@ ol {
 }
 
 .toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
   color: #666666;
   cursor: pointer;
   font-size: 30px;
@@ -101,6 +109,7 @@ ol {
 
 .info {
   display: none;
+  flex-direction: column;
 }
 
 .active > .tab-header {
@@ -112,7 +121,7 @@ ol {
 }
 
 .active > article.info {
-  display: block;
+  display: flex;
 }
 
 .image-container {
@@ -136,7 +145,7 @@ ol {
   margin: 12px 5%;
   max-width: 90%;
   border-width: 0 0 1px;
-  border-color: #666666;
+  border-color: #D1D2D3;
 }
 
 .text-container > p {
@@ -148,6 +157,8 @@ ol {
 
 .code-btn {
   width: 90%;
+  min-width: 280px;
+  max-width: 600px;
   background: #3F3244;
   color: #f2f2f2;
   height: 50px;
@@ -165,9 +176,84 @@ ol {
   }
 }
 
-@media screen and (min-width: 850px) {
-  ol,
-  .code-btn {
-    width: 60%;
+@media screen and (min-width: 680px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    padding: 0 75px;
   }
+
+  header > hr {
+    display: none;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-header > h2 {
+    padding-left: 75px;
+    text-align: left;
+  }
+
+  .accordion-header > hr {
+    margin: unset;
+    max-width: unset;
+    margin-right: 75px;
+    min-width: 55%;
+  }
+
+  ol {
+    position: relative;
+  }
+
+  .tab-header {
+    position: absolute;
+    top: 0px;
+  }
+
+  .tab-one {
+    width: 25%;
+  }
+
+  .tab-two {
+    left: 25%;
+    width: 25%;
+  }
+
+  .tab-three {
+    left: 50%;
+    width: 25%;
+  }
+
+  .tab-four {
+    left: 75%;
+    width: 25%;
+  }
+
+  .info {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 60px;
+    padding: 15px;
+  }
+
+  .image-container {
+    min-width: 200px;
+    height: 300px;
+  }
+
+  .text-container > hr {
+    margin: 12px 0;
+  }
+
+  .code-btn {
+    width: 300px;
+  }
+
 }
