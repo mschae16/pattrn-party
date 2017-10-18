@@ -309,7 +309,7 @@ ol {
 
 @media screen and (min-width: 750px) {
   .accordion-header > h2 {
-    font-size: 1.8vw;
+    font-size: 17px;
   }
 
   .accordion-header > hr {
@@ -330,10 +330,6 @@ ol {
 @media screen and (min-width: 1000px) {
   .accordion-header > hr {
     width: 70%;
-  }
-
-  .accordion-header > h2 {
-    font-size: 1.6vw;
   }
 
   .text-container > p {
