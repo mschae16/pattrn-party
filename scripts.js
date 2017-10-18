@@ -1,6 +1,5 @@
 const toggleTabs = (e) => {
- const targetActive = $(e.target).closest('.tab').hasClass('active');
-
+  const targetActive = $(e.target).closest('.tab').hasClass('active');
   if (targetActive) {
     $('.active').find('.toggle').text('+');
     $('.active').removeClass('active');
@@ -8,7 +7,7 @@ const toggleTabs = (e) => {
     $('.active').find('.toggle').text('+');
     $('.active').removeClass('active');
     $(e.target).closest('.tab').addClass('active');
-    $(e.target).closest('.tab').find('.toggle').text('-')
+    $(e.target).closest('.tab').find('.toggle').text('-');
   }
 }
 
