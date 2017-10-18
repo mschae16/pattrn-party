@@ -126,11 +126,26 @@ ol {
 }
 
 .image-container {
-  min-height: 151px;
-  background-image: url('./assets/northern-lights-mobile.jpg');
+  min-height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.img-one {
+  background-image: url('./assets/northern-lights-1.jpg');
+}
+
+.img-two {
+  background-image: url('./assets/northern-lights-2.jpeg');
+}
+
+.img-three {
+  background-image: url('./assets/northern-lights-3.jpg');
+}
+
+.img-four {
+  background-image: url('./assets/northern-lights-4.jpg');
 }
 
 .text-container {
@@ -182,7 +197,7 @@ ol {
   }
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 690px) {
   header {
     flex-direction: row;
     align-items: center;
@@ -274,20 +289,16 @@ ol {
   }
 
   .image-container {
-    min-width: 200px;
-    height: 300px;
+    min-width: 262px;
+    height: 310px;
   }
 
   .text-container > h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .text-container > hr {
     margin: 12px 0;
-  }
-
-  .text-container > p {
-    font-size: 16px;
   }
 
   .code-link {
@@ -310,6 +321,10 @@ ol {
   .accordion-header > hr {
     width: 65%;
   }
+
+  .text-container > h3 {
+    font-size: 25px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -319,5 +334,9 @@ ol {
 
   .accordion-header > h2 {
     font-size: 1.6vw;
+  }
+
+  .text-container > p {
+    font-size: 16px;
   }
 }
