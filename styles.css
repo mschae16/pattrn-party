@@ -51,10 +51,13 @@ header > p {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   color: #666666;
   text-align: center;
 }
+
+/********** ACCORDION TABS **********/
 
 .accordion-tabs {
   width: 100%;
@@ -186,6 +189,20 @@ ol {
   font-weight: 300;
   line-height: 50px;
   text-align: center;
+}
+
+/********** FLEXIBLE CARDS **********/
+
+.cards-header > h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cards-header > hr {
+  margin: 12px 40%;
+  max-width: 25%;
+  border-width: 0 0 1px;
+  border-color: #D1D2D3;
 }
 
 /********** MEDIA QUERIES **********/
