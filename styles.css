@@ -422,6 +422,7 @@ ol {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 3%;
+    grid-row-gap: 25px;
   }
 
   .card {
