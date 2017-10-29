@@ -256,7 +256,108 @@ ol {
   background-image: url('./assets/northern-lights-7.jpg');
 }
 
-/******** MEDIA QUERIES - TABS ********/
+/****** HEADER BAR ******/
+
+.header-bar {
+  width: 100%;
+  max-width: 1300px;
+  min-width: 300px;
+  padding-top: 35px;
+}
+
+.nav-header > h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav-header > hr {
+  margin: 12px 40%;
+  max-width: 25%;
+  border-width: 0 0 1px;
+  border-color: #D1D2D3;
+}
+
+.nav-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 50px auto;
+  padding: 10px;
+  background: #D1D2D3;
+}
+
+.add-margin-nav {
+  margin-bottom: 300px;
+}
+
+.avatar-round {
+  height: 55px;
+  width: 55px;
+  background-image: url('./assets/northern-lights-7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 35px;
+}
+
+.menu-link {
+  line-height: 55px;
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  background: #f2f2f2;
+}
+
+.dropdown-active {
+  display: flex;
+}
+
+.dropdown-menu > a {
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+  text-align: left;
+  margin: 20px 15px;
+  font-weight: 300;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #666;
+  background: #fff;
+  text-align: left;
+}
+
+.search-icon {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.search-input {
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/****** MEDIA QUERIES - TABS ******/
 
 @media screen and (min-width: 530px) {
   ol,
@@ -404,7 +505,7 @@ ol {
   }
 }
 
-/******* MEDIA QUERIES - CARDS *******/
+/**** MEDIA QUERIES - CARDS ****/
 
 @media screen and (min-width: 640px) {
   .cards-container {
@@ -478,5 +579,43 @@ ol {
 @media screen and (min-width: 1000px) {
   .cards-header > hr {
     width: 70%;
+  }
+}
+
+/**** MEDIA QUERIES - HEADER ****/
+
+@media screen and (min-width: 750px) {
+  .menu-link {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    position: unset;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    background: #D1D2D3;
+    padding: 0;
+  }
+
+  .dropdown-menu > a {
+    margin: 0 10px;
+  }
+
+  .search-container {
+    width: 35%;
+    margin: 0;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900) {
+  .nav-bar {
+    width: 80%;
   }
 }
