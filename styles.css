@@ -281,6 +281,7 @@ ol {
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   margin: 50px auto;
   padding: 10px;
@@ -338,6 +339,7 @@ ol {
   display: flex;
   align-items: center;
   height: 40px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #666;
   background: #fff;
@@ -350,10 +352,10 @@ ol {
 }
 
 .search-input {
+  border: none;
   font-size: 20px;
   font-weight: 300;
 }
-
 
 /****** MEDIA QUERIES - TABS ******/
 
@@ -503,7 +505,7 @@ ol {
   }
 }
 
-/******* MEDIA QUERIES - CARDS *******/
+/**** MEDIA QUERIES - CARDS ****/
 
 @media screen and (min-width: 640px) {
   .cards-container {
@@ -577,5 +579,43 @@ ol {
 @media screen and (min-width: 1000px) {
   .cards-header > hr {
     width: 70%;
+  }
+}
+
+/**** MEDIA QUERIES - HEADER ****/
+
+@media screen and (min-width: 750px) {
+  .menu-link {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    position: unset;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    background: #D1D2D3;
+    padding: 0;
+  }
+
+  .dropdown-menu > a {
+    margin: 0 10px;
+  }
+
+  .search-container {
+    width: 35%;
+    margin: 0;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900) {
+  .nav-bar {
+    width: 80%;
   }
 }
