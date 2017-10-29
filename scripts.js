@@ -12,3 +12,10 @@ const toggleTabs = (e) => {
 }
 
 $('.tab-header').on('click', (e) => toggleTabs(e));
+
+const toggleNav = (e) => {
+  $('.nav-bar').toggleClass('add-margin-nav');
+  $('.dropdown-menu').toggleClass('dropdown-active');
+}
+
+$('.menu-link').on('click', toggleNav);

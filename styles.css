@@ -287,6 +287,10 @@ ol {
   background: #D1D2D3;
 }
 
+.add-margin-nav {
+  margin-bottom: 300px;
+}
+
 .avatar-round {
   height: 55px;
   width: 55px;
@@ -310,11 +314,15 @@ ol {
   position: absolute;
   top: 75px;
   left: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   padding: 10px;
   background: #f2f2f2;
+}
+
+.dropdown-active {
+  display: flex;
 }
 
 .dropdown-menu > a {
