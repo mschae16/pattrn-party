@@ -584,7 +584,35 @@ ol {
 
 /**** MEDIA QUERIES - HEADER ****/
 
+@media screen and (min-width: 640px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-header > h2 {
+    padding-left: 75px;
+    text-align: left;
+  }
+
+  .nav-header > hr {
+    margin: unset;
+    max-width: unset;
+    margin-right: 75px;
+    min-width: 60%;
+  }
+}
+
 @media screen and (min-width: 750px) {
+  .nav-header > h2 {
+    font-size: 17px;
+  }
+
+  .nav-header > hr {
+    width: 65%;
+  }
+
   .menu-link {
     display: none;
   }
@@ -614,8 +642,18 @@ ol {
   }
 }
 
-@media screen and (min-width: 900) {
+@media screen and (min-width: 900px) {
+  .nav-header > hr {
+    width: 70%;
+  }
+
   .nav-bar {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-header > hr {
+    width: 75%;
   }
 }
